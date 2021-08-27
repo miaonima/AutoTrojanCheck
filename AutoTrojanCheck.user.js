@@ -13,13 +13,7 @@
 (function() {
     'use strict';
     var intervalId = window.setInterval( function() {
-        // Click Begin (Assessment) Next or Submit if any exists on page.
-        $(".btn-begin-assessment").click();
-        $(".btn-assessment-start").click();
-        $(".btn-next").click();
-        $(".btn-submit").click();
-
-        // Click No
+        // Click No if such button exists
         $("div.mat-button-toggle-label-content:contains('No')").click();
 
         // Check the checkboxes
@@ -27,5 +21,13 @@
         if(checkbox && !checkbox.prop("checked")) {
             checkbox.click();
         }
+
+        // Click Begin (Assessment) Next or Submit if any exists on page.
+        $(".btn-begin-assessment").click();
+        $(".btn-assessment-start").click();
+        $(".btn-next").click();
+        $(".btn-submit").click();
+
+
     }, 500);
 })();
