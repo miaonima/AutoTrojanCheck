@@ -2,7 +2,7 @@
 // @name         AutoTrojanCheck
 // @namespace    http://tampermonkey.net/
 // @version      0.1
-// @description  try to take over the world!
+// @description  Trojancheck autocomplete
 // @author       You
 // @match        https://trojancheck.usc.edu/*
 // @icon         https://www.google.com/s2/favicons?domain=usc.edu
@@ -23,6 +23,7 @@
         }
 
         // Click Begin (Assessment) Next or Submit if any exists on page.
+        $(".btn-login").click();
         $(".btn-begin-assessment").click();
         $(".btn-assessment-start").click();
         $(".btn-next").click();
